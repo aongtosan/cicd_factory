@@ -4,5 +4,5 @@ metadata:
   name: deploy-pod
 spec:
   containers:
-  - name: my-container
+  - name: game-deploy-pod
     image: nginx:latest
