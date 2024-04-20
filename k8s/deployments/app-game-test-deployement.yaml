@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-game-test-deployment
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: app-game-test
+  template:
+    metadata:
+      name: app-game-test-pods
+      labels: 
+        app : app-game-test
+    spec:
+      containers:
+        - name: app-game-test
+          image: aongtosan/app-game-test:1.0
+          # ports:
+          #   - containerPort: 5555
+          #     protocol: TCP

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-game-test-pod
+  labels: 
+    app : app-game-test
+spec:
+  containers:
+    - name: app-game-test
+      image: aongtosan/app-game-test:1.0
