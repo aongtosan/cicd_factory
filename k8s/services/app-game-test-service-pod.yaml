@@ -9,8 +9,6 @@ spec:
   selector: 
     app: app-game-test
   ports:
-    - port: 9999
+    - port: 80
       targetPort: 5555
       nodePort: 30001
-      protocol: TCP
-      name : app-game-test-service
