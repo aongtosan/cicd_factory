@@ -19,7 +19,7 @@ spec:
         - containerPort: 8080
         env:
         - name: PASSWORD
-          value: "your_password"
+          value: "P@ssw0rd"
         resources:
           limits:
             memory: "512Mi"
