@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vscode-server
+  name: app-vscode-server-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vscode-server
+      app: app-vscode-server
   template:
     metadata:
       labels:
-        app: vscode-server
+        app: app-vscode-server
     spec:
       containers:
-      - name: vscode-server
-        image: your_dockerhub_username/vscode-server
-        ports:
-        - containerPort: 8080
+      - name: app-vscode-server
+        image: aongtosan/app-vscode-server
         env:
         - name: PASSWORD
           value: "P@ssw0rd"
