@@ -14,11 +14,7 @@ spec:
     spec:
       containers:
       - name: app-vscode-server
-        image: aongtosan/app-vscode-server
+        image: linuxserver/code-server
         env:
         - name: PASSWORD
           value: "P@ssw0rd"
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
