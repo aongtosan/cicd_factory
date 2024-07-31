@@ -14,7 +14,4 @@ spec:
     spec:
       containers:
       - name: app-vscode-server
-        image: linuxserver/code-server
-        env:
-        - name: PASSWORD
-          value: "P@ssw0rd"
+        image: aongtosan/app-vscode-server
