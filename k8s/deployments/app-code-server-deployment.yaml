@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: app-vscode-server
-        image: aongtosan/app-vscode-server
+        image: aongtosan/app-vscode-server:v1.1.1

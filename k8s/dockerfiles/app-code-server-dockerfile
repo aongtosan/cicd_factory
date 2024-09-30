@@ -1,0 +1,19 @@
+# Use Ubuntu 20.04 as the base image
+FROM ubuntu:20.04
+
+
+# Set the user to root (default user in most Docker images)
+USER root
+
+# Install necessary packages (dummy command, adjust as necessary)
+RUN apt-get update && apt-get install -y \
+    curl \
+    openssh-client
+
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+# Expose port 8443
+EXPOSE 8443
+
+# Set entrypoint and command
+ENTRYPOINT ["code-server", "--bind-addr", "0.0.0.0:8443", "--auth", "none"]
